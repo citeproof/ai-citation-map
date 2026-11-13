@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-citation-map"
+version = "0.1.0"
+description = "Rank the domains cited in AI answers (ChatGPT, Perplexity, Gemini) from a CSV."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [{ name = "CiteProof", email = "hello@citeproof.co" }]
+keywords = ["seo", "aeo", "ai search", "chatgpt", "perplexity", "citations", "llm"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+
+[project.urls]
+Homepage = "https://github.com/citeproof/ai-citation-map"
+Source = "https://github.com/citeproof/ai-citation-map"
+"Related tools" = "https://citeproof.co/tools/ai-citation-checker?utm_source=pypi&utm_medium=parasite&utm_campaign=ai-citation-map"
+
+[project.scripts]
+ai-citation-map = "ai_citation_map.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_citation_map"]
